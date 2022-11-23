@@ -1,0 +1,12 @@
+{
+  "instagram": {
+    "icon": "instagram",
+    "href": "https://instagram.com",
+    "name": "instagram"
+  },
+  "facebook": {
+    "icon": "facebook",
+    "href": "https://facebook.com",
+    "name": "facebook"
+  }
+}
