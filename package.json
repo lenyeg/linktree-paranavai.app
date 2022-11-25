@@ -13,6 +13,7 @@
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.2.1",
     "@astrojs/partytown": "^1.0.1",
+    "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^2.1.2",
     "astro": "^1.6.10",
     "astro-icon": "^0.8.0",
