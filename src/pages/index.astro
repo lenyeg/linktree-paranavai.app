@@ -10,7 +10,7 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 	<main class="flex flex-col justify-start items-center text-center gap-4 h-screen max-w-[600px] mx-auto">
 		<section class="flex flex-col justify-start items-center text-center gap-4 py-10 w-full">
 			<section class="w-28 h-28 bg-white rounded-full">
-				<img src="/images/perfil-linktree.png" alt="Logo da Paranavaí.app" draggable="false">
+				<img src="/images/perfil-linktree.png" alt="Logo da Paranavaí.app">
 			</section>
 			<h1 class="text-[#374151] font-semibold text-lg">Paranavai.app</h1>
 			<ul class="flex gap-4">
@@ -24,19 +24,19 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 						</li>
 					)
 				} -->
-				<li class="bg-[#258D7D] text-white w-14 h-14 flex items-center justify-center rounded-full cursor-pointer">
+				<li class="bg-[#258D7D] text-white w-14 h-14 flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#56A69A]">
 					<a href="https://www.facebook.com/paranavaiapp" target="_blank">
 						<Icon name="facebook" class='w-6 h-6'/>
 						<span class="sr-only">facebook</span>
 					</a>
 				</li>
-				<li class="bg-[#258D7D] text-white w-14 h-14 flex items-center justify-center rounded-full cursor-pointer">
+				<li class="bg-[#258D7D] text-white w-14 h-14 flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#56A69A]">
 					<a href="https://www.instagram.com/paranavai.app/" target="_blank">
 						<Icon name="instagram" class='w-6 h-6'/>
 						<span class="sr-only">instagram</span>
 					</a>
 				</li>
-				<li class="bg-[#258D7D] text-white w-14 h-14 flex items-center justify-center rounded-full cursor-pointer">
+				<li class="bg-[#258D7D] text-white w-14 h-14 flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#56A69A]">
 					<a href="https://api.whatsapp.com/send?phone=5544920018161&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20maximizar%20os%20resultados%20do%20meu%20neg%C3%B3cio!" target="_blank">
 						<Icon name="whatsapp" class='w-6 h-6'/>
 						<span class="sr-only">whatsapp</span>
@@ -45,18 +45,18 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 			</ul>
 		</section>
 		<section class="container mx-auto px-5">
-			<article class="flex flex-col items-center gap-6">
-				<a href="https://paranavai.app" target="_blank" class="bg-[#D1D5DB] text-[#374151] font-medium p-3 rounded-full w-full">Visite nosso site</a>
+			<article class="flex flex-col items-center gap-4">
+				<a href="https://paranavai.app" target="_blank" class="relative bg-[#D1D5DB] text-[#374151] font-medium p-3 rounded-full w-full before:absolute before:-top-1 before:-right-1 before:-bottom-1 before:-left-1 before:rounded-full before:bg-[#374151] before:opacity-0 hover:before:opacity-20 before:duration-300"><span class="z-10">Visite nosso site</span></a>
 				<section class="flex flex-col items-center w-full">
-					<span class="font-semibold text-[#374151]  text-2xl leading-9 tracking-tighter uppercase">Startup digital</span>
+					<span class="font-bold text-[#374151] uppercase">Startup digital</span>
 					<YouTube
 						id="75TxRKzHJ6Q"
 						class="w-full"
 					/>
 				</section>
-				<a href="https://api.whatsapp.com/send?phone=5544920018161&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20maximizar%20os%20resultados%20do%20meu%20neg%C3%B3cio!" class="flex justify-center items-center gap-4 font-medium text-[#374151] p-3 bg-gradient-to-r from-[#F4A261] to-[#e87352] w-full rounded-full" target="_blank">
-					Quero resultado máximo!
-					<Icon name="whatsapp" class="w-5 h-5" />
+				<a href="https://api.whatsapp.com/send?phone=5544920018161&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20maximizar%20os%20resultados%20do%20meu%20neg%C3%B3cio!" class="relative flex justify-center items-center gap-4 font-bold text-[#374151] p-3 bg-gradient-to-r from-[#F4A261] to-[#e87352] w-full rounded-full before:absolute before:-top-1 before:-right-1 before:-bottom-1 before:-left-1 before:rounded-full before:bg-[#e87352] before:opacity-0 hover:before:opacity-40 before:duration-300" target="_blank">
+					<span class="flex gap-4 z-10">Quero resultado máximo!
+						<Icon name="whatsapp" class="w-5 h-5" /></span>
 				</a>
 			</article>
 		</section>
