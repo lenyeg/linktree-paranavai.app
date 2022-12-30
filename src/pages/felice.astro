@@ -11,7 +11,12 @@ import { Icon } from 'astro-icon'
       class="bg flex flex-col justify-start items-center text-center gap-4 py-10 w-full"
     >
       <section class="flex items-center justify-center w-28 h-28">
-        <img src="/images/felice/perfil.png" alt="Logo da Paranavaí.app" />
+        <img
+          src="/images/felice/perfil.png"
+          alt="Logo da Paranavaí.app"
+          width="104"
+          height="104"
+        />
       </section>
       <h1 class="text-[#374B51] font-semibold">Felice Centro de Terapias</h1>
       <ul class="flex gap-4">
@@ -26,24 +31,24 @@ import { Icon } from 'astro-icon'
 					)
 				} -->
         <li
-          class="bg-[#A25B80] text-white w-14 h-14 lg:w-[146px] flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#E17538]"
+          class="bg-[#A25B80] text-white flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#E17538]"
         >
           <a
             href="https://www.instagram.com/fonorobertafelice/"
             target="_blank"
-            class="lg:flex items-center justify-center gap-2"
+            class="flex items-center justify-center gap-2 w-14 h-14 lg:w-[146px]"
           >
             <Icon name="instagram" class="w-6 h-6" />
             <span class="sr-only lg:not-sr-only">instagram</span>
           </a>
         </li>
         <li
-          class="bg-[#A25B80] text-white w-14 h-14 lg:w-[146px] flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#E17538]"
+          class="bg-[#A25B80] text-white flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#E17538]"
         >
           <a
             href="https://wa.me/554498825910"
             target="_blank"
-            class="lg:flex items-center justify-center gap-2"
+            class="flex items-center justify-center gap-2 w-14 h-14 lg:w-[146px]"
           >
             <Icon name="whatsapp" class="w-6 h-6" />
             <span class="sr-only lg:not-sr-only">whatsapp</span>
@@ -52,26 +57,12 @@ import { Icon } from 'astro-icon'
       </ul>
     </section>
     <section class="container mx-auto px-5">
-      <article class="flex flex-col items-center gap-4 max-w-[600px] mx-auto">
-        <a
-          href="https://paranavai.app"
-          target="_blank"
-          class="flex justify-center items-center gap-4 bg-[#E2DEE4] text-[#A25B80] font-medium p-3 rounded-full w-full hover:bg-[#C8C4C9] duration-300"
-          ><span class="z-10">Visite nosso site</span>
-          <Icon name="click" class="w-5 h-5" />
-        </a>
-        <section class="flex flex-col items-center w-full">
-          <img
-            src="/images/felice/felice.png"
-            alt=""
-            width="342"
-            height="427"
-            class="lg:w-[544px] lg:h-[680px]"
-          />
-        </section>
+      <article
+        class="flex flex-col items-center gap-4 max-w-[342px] lg:max-w-[544px] mx-auto"
+      >
         <a
           href="https://api.whatsapp.com/send?phone=5544920018161&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20maximizar%20os%20resultados%20do%20meu%20neg%C3%B3cio!"
-          class="flex justify-center items-center gap-4 font-bold text-[#374151] p-3 bg-[#E17538] w-full rounded-full hover:bg-[#A25B80] duration-300"
+          class="flex justify-center items-center gap-4 font-bold text-white p-3 bg-[#E17538] w-full rounded-full hover:bg-[#A25B80] duration-300"
           target="_blank"
         >
           <span class="flex gap-4 z-10"
@@ -79,16 +70,32 @@ import { Icon } from 'astro-icon'
             <Icon name="whatsapp" class="w-5 h-5" />
           </span>
         </a>
+        <section class="flex flex-col items-center w-full">
+          <picture>
+            <source
+              srcset="/images/felice/feliceMobile.jpg"
+              width="342"
+              height="428"
+              media="(max-width: 600px)"
+            />
+            <img
+              src="/images/felice/felice.jpg"
+              alt="Vem ser Felice!"
+              width="544"
+              height="680"
+            />
+          </picture>
+        </section>
       </article>
     </section>
     <section
-      class="flex items-center justify-center gap-12 text-[#374B51] text-3xl py-10"
+      class="flex flex-col items-center justify-center gap-2 text-[#6B7B80] text-xs py-10"
     >
-      <span>Felice</span>
+      <span>Powered by</span>
 
       <a href="https://paranavai.app">
         <span class="sr-only">paranavai.app</span>
-        <Icon name="pvaisimple" class="w-8 h-8" />
+        <Icon name="pvaiapp" class="w-48" />
       </a>
     </section>
   </main>
