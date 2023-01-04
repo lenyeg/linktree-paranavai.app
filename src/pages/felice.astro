@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import { Icon } from 'astro-icon'
+
+const socialImageURL = new URL('/images/felice/felice.png', Astro.url)
 ---
 
 <Layout
   title="Vem ser Felice"
   description={'Atendimento na área da Fonoaudiologia, em vários tipos de tratamento como: alterações de fala e linguagem, paralisia facial, ronco, apneia do sono, disfagia, reabilitação vestibular, pré e pós de cirurgia ortognatica, zumbido e bruxismo'}
-  socialImageURL={('/images/felice/felice.png', Astro.url)}
+  socialImageURL={socialImageURL}
 >
   <main
     class="flex flex-col justify-start items-center text-center gap-4 h-screen"
