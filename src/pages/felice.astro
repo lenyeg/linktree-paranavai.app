@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Icon } from 'astro-icon'
+
+const socialImageURL = new URL('/images/felice/banner-social.png', Astro.url)
+---
+
+<Layout
+  title="Vem ser Felice"
+  description={'Atendimento na área da Fonoaudiologia, em vários tipos de tratamento como: alterações de fala e linguagem, paralisia facial, ronco, apneia do sono, disfagia, reabilitação vestibular, pré e pós de cirurgia ortognatica, zumbido e bruxismo'}
+  socialImageURL={socialImageURL}
+>
+  <main
+    class="flex flex-col justify-start items-center text-center gap-4 h-screen"
+  >
+    <section
+      class="bg flex flex-col justify-start items-center text-center gap-4 py-10 w-full"
+    >
+      <section class="flex items-center justify-center w-28 h-28">
+        <img
+          src="/images/felice/perfil.png"
+          alt="Logo da Paranavaí.app"
+          width="104"
+          height="104"
+        />
+      </section>
+      <h1 class="text-[#374B51] font-semibold">Felice Centro de Terapias</h1>
+      <ul class="flex gap-4">
+        <!-- {
+					socialLinks.map((s) => 
+						<li>
+							<a href={s.href}>
+								<Icon name={s.icon}/>
+								<span class="sr-only">{s.name}</span>
+							</a>
+						</li>
+					)
+				} -->
+        <li
+          class="bg-[#A25B80] text-white flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#E17538]"
+        >
+          <a
+            href="https://www.instagram.com/fonorobertafelice/"
+            target="_blank"
+            class="flex items-center justify-center gap-2 w-14 h-14 lg:w-[146px]"
+          >
+            <Icon name="instagram" class="w-6 h-6" />
+            <span class="sr-only lg:not-sr-only">instagram</span>
+          </a>
+        </li>
+        <li
+          class="bg-[#A25B80] text-white flex items-center justify-center rounded-full cursor-pointer duration-300 hover:bg-[#E17538]"
+        >
+          <a
+            href="https://api.whatsapp.com/send?phone=554498825910&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20Quero%20ser%20FELICE!%20"
+            target="_blank"
+            class="flex items-center justify-center gap-2 w-14 h-14 lg:w-[146px]"
+          >
+            <Icon name="whatsapp" class="w-6 h-6" />
+            <span class="sr-only lg:not-sr-only">whatsapp</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="container mx-auto px-5">
+      <article
+        class="flex flex-col items-center gap-4 max-w-[342px] lg:max-w-[544px] mx-auto"
+      >
+        <a
+          href="https://felicecentrodeterapias.com.br/"
+          class="flex justify-center items-center gap-4 font-medium text-white p-3 bg-[#E17538] w-full rounded-full hover:bg-[#A25B80] duration-300"
+          target="_blank"
+        >
+          <span class="flex gap-4 z-10"
+            >Quero ser FELICE!
+            <Icon name="click" class="w-5 h-5" />
+          </span>
+        </a>
+        <section class="flex flex-col items-center w-full">
+          <picture>
+            <source
+              srcset="/images/felice/feliceMobile.png"
+              width="342"
+              height="428"
+              media="(max-width: 600px)"
+            />
+            <img
+              src="/images/felice/felice.png"
+              alt="Vem ser Felice!"
+              width="544"
+              height="680"
+            />
+          </picture>
+        </section>
+      </article>
+    </section>
+    <section
+      class="flex flex-col items-center justify-center gap-2 text-[#6B7B80] text-xs py-10"
+    >
+      <span>Powered by</span>
+
+      <a href="https://paranavai.app">
+        <span class="sr-only">paranavai.app</span>
+        <Icon name="pvaiapp" class="w-48" />
+      </a>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .bg {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #e2dee4 100%);
+  }
+</style>

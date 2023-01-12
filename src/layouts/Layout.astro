@@ -1,80 +1,91 @@
 ---
 export interface Props {
-	title: string;
-	description?: string
+  title: string
+  description?: string
+  socialImageURL: URL
 }
 
-const { title, description } = Astro.props as Props;
+let { title, description, socialImageURL } = Astro.props as Props
 const titleTemplate = () => {
-	const siteName = "Paranavai.app";
-	return title && title !== siteName ? `${title} - ${siteName}` : siteName
+  const siteName = 'Paranavai.app'
+  return title && title !== siteName ? `${title} - ${siteName}` : siteName
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImageURL = new URL("/images/banner-social.png", Astro.url);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+socialImageURL = new URL('/images/banner-social.png', Astro.url)
 ---
 
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
 
-		<title>{titleTemplate()}</title>
+    <title>{titleTemplate()}</title>
     <meta name="description" content={description} />
 
-		<meta property="og:type" content="website" /> 
-    <meta property="og:url" content={canonicalURL} /> 
-		<meta property="og:title" content={titleTemplate()} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={titleTemplate()} />
     <meta property="og:description" content={description} />
-		<meta property="og:image" content={socialImageURL} />
+    <meta property="og:image" content={socialImageURL} />
 
-		<link rel="canonical" href={canonicalURL} />
+    <link rel="canonical" href={canonicalURL} />
 
-		<script
+    <script
       is:inline
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-8YTHS29PTC"
     ></script>
 
     <script is:inline>
-      const eventTime = () => Math.round(new Date().getTime() / 1000);
-      window.dataLayer = window.dataLayer || [];
+      const eventTime = () => Math.round(new Date().getTime() / 1000)
+      window.dataLayer = window.dataLayer || []
       function gtag() {
-        dataLayer.push(arguments);
+        dataLayer.push(arguments)
       }
-      gtag("js", new Date());
-      gtag("config", "G-8YTHS29PTC", {
-        transport_url: "https://ss.paranavai.app",
+      gtag('js', new Date())
+      gtag('config', 'G-8YTHS29PTC', {
+        transport_url: 'https://ss.paranavai.app',
         first_party_collection: true,
         anonymize_ip: true,
         send_page_view: true,
-        cookie_domain: "auto",
-        event_time: eventTime()
-      });
+        cookie_domain: 'auto',
+        event_time: eventTime(),
+      })
     </script>
-	</head>
-	<body style="background: linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, #D1D5DB 100%);">
-		<slot />
-	</body>
+  </head>
+  <body
+    style="background: linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, #D1D5DB 100%);"
+  >
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: 'Poppins', sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f6f6;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
 </style>
